@@ -40,7 +40,8 @@
 }
 
 .layered-cards:hover > div:hover {
-	margin-bottom: -200px;
+	margin-top: 100px;
+	margin-bottom: -50px;
 	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 	box-shadow: 0 0 0 0 #E95420;
 	transition: all 0.5s ease;
