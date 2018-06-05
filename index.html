@@ -34,5 +34,17 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			var parents = document.getElementsByClassName('layered-cards');
+			Array.from(parents).forEach(function(parent){
+				var children = parent.getElementsByTagName('div');
+				for (i = 0; i < Array.from(children).length; i++){
+					console.log(children[i])
+					console.log(children[i].style.zIndex)
+					children[i].style.zIndex = 10 - i
+					console.log(children[i].style.zIndex)
+				}
+			})
+		</script>
 	</body>
 </html>
