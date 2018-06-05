@@ -1,5 +1,5 @@
 .desk-spacer{
-	padding-top: 100vh;
+	padding-top: 50vh;
 }
 
 .desk-background{
@@ -10,6 +10,7 @@
 	color: white;
 	background-color: #6878ED;
 	text-align: center;
+	z-index: 1;
 }
 
 .desk-title{
@@ -26,11 +27,21 @@
 	transform: rotateX(50deg) rotateY(0deg) rotateZ(-50deg);
 }
 
+.layered-cards{
+	position: relative;
+	display: block;
+	height: 1000px;
+	padding-top: 25vh;
+	padding-bottom: 50vh;
+	z-index: 9999;
+}
+
 .layered-cards > div{
 	position: relative;
 	display: block;
 	max-width: 300px;
 	height: 500px;
+	overflow-y: hidden;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: -500px;
@@ -40,6 +51,10 @@
 	transition: all 0.5s ease;
 }
 
+.layered-cards:hover > div{
+	margin-bottom: -400px;
+}
+
 .layered-cards:hover > div:hover {
 	margin-top: 100px;
 	margin-bottom: -50px;
@@ -47,4 +62,6 @@
 	box-shadow: 0 0 0 0 #E95420;
 	transition: all 0.5s ease;
 	z-index: 999 !important;
+	min-height: 500px;
+	height: auto;
 }
