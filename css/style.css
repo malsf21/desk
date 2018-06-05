@@ -27,6 +27,7 @@
 }
 
 .layered-cards > div{
+	position: relative;
 	display: block;
 	max-width: 300px;
 	height: 500px;
@@ -37,6 +38,7 @@
 	transform: rotateX(50deg) rotateY(0deg) rotateZ(-50deg);
   box-shadow: -3px 3px 0 #E95420, -6px 6px 0 #E95420, -9px 9px 0 #E95420, -12px 12px 0 #E95420, -14px 10px 20px #666;
 	transition: all 0.5s ease;
+	z-index: 10;
 }
 
 .layered-cards:hover > div:hover {
@@ -45,4 +47,5 @@
 	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 	box-shadow: 0 0 0 0 #E95420;
 	transition: all 0.5s ease;
+	z-index: 999;
 }
