@@ -13,47 +13,31 @@
 		</div>
 		<div class="desk-body">
 			<div class="desk-spacer"></div>
-			<div class="layered-cards">
-				<div class="card card-bordered-primary">
-					<h1>Full Stack Development</h1>
-					<p>
-						I know my way around HTML + CSS, JS and many of its frameworks (Node, React, Angular, Ionic/Cordova, Electron, jQuery), and I can comfortably code in Java, Python, PHP, and Ruby. I'm familiar with SQL, mySQL, phpmyadmin, and Firebase, I've managed several webservers (Nginx and Apache), and am comfortable with the command line. And, of course, I love using git.
-					</p>
-					<p class="text-center">
-						Featured Projects
-						<br />
-						<a class="button button-primary" href="https://github.com/malsf21/">AudioNotch</a>
-						<a class="button button-primary" href="https://github.com/malsf21/fair-chair">Fair Chair</a>
-						<a class="button button-primary" href="https://github.com/malsf21/liteweight">Liteweight</a>
-						<a class="button button-primary" href="https://github.com/worldaffairsconference/world.ac">WAC</a>
-					</p>
-				</div>
-				<div class="card card-bordered-primary">
-					<h1>Graphic Design and Layout</h1>
-					<p>
-						Making things pretty is pretty cool: I can do branding, marketing materials, event materials, publications, UI/UX Design, and product prototyping. I try to make things look pretty with Photoshop, Illustrator, and InDesign.
-					</p>
-				</div>
-				<div class="card card-bordered-primary">
-					<h1>Educational Experiences</h1>
-					<p>
-						I'm passionate about education, and what I do shows it. I've spent hundreds of hours teaching in peer-tutoring programs, and I started a few educational programs at my school: creating curriculums, organising instructors, and teaching inner-city students 4-week courses on Computer Science and Robotics.
-					</p>
-				</div>
-			</div>
+			<div class="layered-cards" id="stack"></div>
 			<div class="desk-spacer"></div>
 		</div>
 		<script>
-			var parents = document.getElementsByClassName('layered-cards');
-			Array.from(parents).forEach(function(parent){
-				var children = parent.getElementsByTagName('div');
-				for (i = 0; i < Array.from(children).length; i++){
-					console.log(children[i])
-					console.log(children[i].style.zIndex)
-					children[i].style.zIndex = 10 - i
-					console.log(children[i].style.zIndex)
+			fetch('./desk.json')
+		  .then(function(response) {
+		    return response.json();
+		  })
+		  .then(function(data) {
+				console.log(data)
+				for (book in data.books){
+					var bookObj = data.books[book];
+					var fstring = bookObj.fiction ? "Fiction" : "Non-fiction";
+					var string = '<div class="card card-bordered-primary"><h1 class="title title-1"><i>' + bookObj.title + '</i></h1><h2>by ' + bookObj.author + '</h2><p><b>' + fstring + ' | ' + bookObj.genre + '</b></p><p>'+ bookObj.description + '</p></div>';
+					document.getElementById("stack").innerHTML = document.getElementById("stack").innerHTML += string;
 				}
-			})
+				var parents = document.getElementsByClassName('layered-cards');
+				Array.from(parents).forEach(function(parent){
+					var children = parent.getElementsByTagName('div');
+					for (i = 0; i < Array.from(children).length; i++){
+						children[i].style.zIndex = 10 - i;
+					}
+				})
+		  });
+
 		</script>
 	</body>
 </html>

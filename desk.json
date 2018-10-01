@@ -1,0 +1,28 @@
+{
+	"books": [
+		{
+			"title": "Justice",
+			"long-title": "Justice: What's the Right Thing to Do?",
+			"author": "Michael Sandel",
+			"fiction": false,
+			"genre": "Political Philosophy",
+			"description": "Bro ipsum dolor sit amet taco glove gear jammer stoked, backside taco mitt heli dirtbag frozen chicken heads table top shreddin. Hero saddle skid lid avie bonk. North shore free ride wheels scream taco glove dust on crust. North shore drop huck DH flow shuttle."
+		},
+		{
+			"title": "Factfulness",
+			"long-title": "Factfulness: Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think",
+			"author": "Hans Rosling",
+			"fiction": false,
+			"genre": "Global Health",
+			"description": "Bro ipsum dolor sit amet taco glove gear jammer stoked, backside taco mitt heli dirtbag frozen chicken heads table top shreddin. Hero saddle skid lid avie bonk. North shore free ride wheels scream taco glove dust on crust. North shore drop huck DH flow shuttle."
+		},
+		{
+			"title": "Sapiens",
+			"long-title": "Sapiens: A Brief History of Humankind",
+			"author": "Yuval Noah Harari",
+			"fiction": false,
+			"genre": "Human History",
+			"description": "Bro ipsum dolor sit amet taco glove gear jammer stoked, backside taco mitt heli dirtbag frozen chicken heads table top shreddin. Hero saddle skid lid avie bonk. North shore free ride wheels scream taco glove dust on crust. North shore drop huck DH flow shuttle."
+		}
+	]
+}
