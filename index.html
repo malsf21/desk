@@ -26,7 +26,14 @@
 				for (book in data.books){
 					var bookObj = data.books[book];
 					var fstring = bookObj.fiction ? "Fiction" : "Non-fiction";
-					var string = '<div class="card card-bordered-primary"><h1 class="title title-1"><i>' + bookObj.title + '</i></h1><h2>by ' + bookObj.author + '</h2><p><b>' + fstring + ' | ' + bookObj.genre + '</b></p><p>'+ bookObj.description + '</p><div class="text-center"><a class="button button-primary" href="' + bookObj.amazon +'">Amazon</a></div></div>';
+					var bstring = "";
+					if (bookObj.amazon){
+						bstring += '<a class="button button-primary" href="' + bookObj.amazon +'"><span class="fab fa-amazon"></span></a>';
+					}
+					if (bookObj.wikipedia){
+						bstring += '<a class="button button-primary" href="' + bookObj.wikipedia +'"><span class="fab fa-wikipedia-w"></span></a>'
+					}
+					var string = '<div class="card card-bordered-primary"><h1 class="title title-1"><i>' + bookObj.title + '</i></h1><h2>by ' + bookObj.author + '</h2><p><b>' + fstring + ' | ' + bookObj.genre + '</b></p><p>'+ bookObj.description + '</p><hr class="border-top-primary" /><div class="text-center">' + bstring + '</div></div>';
 					document.getElementById("stack").innerHTML = document.getElementById("stack").innerHTML += string;
 				}
 				var parents = document.getElementsByClassName('layered-cards');
@@ -39,5 +46,7 @@
 		  });
 
 		</script>
+		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/brands.js" integrity="sha384-2vdvXGQdnt+ze3ylY5ESeZ9TOxwxlOsldUzQBwtjvRpen1FwDT767SqyVbYrltjb" crossorigin="anonymous"></script>
+	 	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/fontawesome.js" integrity="sha384-2OfHGv4zQZxcNK+oL8TR9pA+ADXtUODqGpIRy1zOgioC4X3+2vbOAp5Qv7uHM4Z8" crossorigin="anonymous"></script>
 	</body>
 </html>
