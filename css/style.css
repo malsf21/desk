@@ -26,6 +26,18 @@
 	transform: rotateX(50deg) rotateY(0deg) rotateZ(-50deg);
 }
 
+@media only screen and (min-width: 768px) {
+	.lifted-gh{
+		position: fixed;
+		top: 0.5em;
+		left: 0.5em;
+		z-index: 10000;
+	}
+	.display-mobile{
+		display: none;
+	}
+}
+
 .layered-cards{
 	position: relative;
 	display: block;
