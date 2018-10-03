@@ -26,7 +26,7 @@
 				for (book in data.books){
 					var bookObj = data.books[book];
 					var fstring = bookObj.fiction ? "Fiction" : "Non-fiction";
-					var string = '<div class="card card-bordered-primary"><h1 class="title title-1"><i>' + bookObj.title + '</i></h1><h2>by ' + bookObj.author + '</h2><p><b>' + fstring + ' | ' + bookObj.genre + '</b></p><p>'+ bookObj.description + '</p></div>';
+					var string = '<div class="card card-bordered-primary"><h1 class="title title-1"><i>' + bookObj.title + '</i></h1><h2>by ' + bookObj.author + '</h2><p><b>' + fstring + ' | ' + bookObj.genre + '</b></p><p>'+ bookObj.description + '</p><div class="text-center"><a class="button button-primary" href="' + bookObj.amazon +'">Amazon</a></div></div>';
 					document.getElementById("stack").innerHTML = document.getElementById("stack").innerHTML += string;
 				}
 				var parents = document.getElementsByClassName('layered-cards');
