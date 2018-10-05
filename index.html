@@ -5,7 +5,7 @@
 		<title>my desk</title>
 		<link rel="icon" type="image/png" href="favicon.png">
 		<link rel="stylesheet" type="text/css" href="css/liteweight.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css?v1.0.0" />
 	</head>
 	<body>
 		<div class="desk-background">
@@ -16,7 +16,16 @@
 		</div>
 		<div class="desk-body">
 			<div class="desk-spacer"></div>
-			<div class="layered-cards" id="stack"></div>
+			<div class="layered-cards" id="stack">
+				<div class="card card-bordered-primary">
+					<div class="v-flex-container">
+						<div class="v-flex-item">
+							<h1 class="title title-1">my favourite books</h1>
+							<h2>i think they're pretty cool</h2>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="desk-spacer"></div>
 		</div>
 		<script>
@@ -43,7 +52,7 @@
 				Array.from(parents).forEach(function(parent){
 					var children = parent.getElementsByTagName('div');
 					for (i = 0; i < Array.from(children).length; i++){
-						children[i].style.zIndex = 10 - i;
+						children[i].style.zIndex = 100 - i;
 					}
 				})
 		  });
