@@ -2,7 +2,7 @@
 	"books": [
 		{
 			"title": "Justice",
-			"long-title": "Justice: What's the Right Thing to Do?",
+			"longTitle": "Justice: What's the Right Thing to Do?",
 			"author": "Michael Sandel",
 			"fiction": false,
 			"genre": "Political Philosophy",
@@ -12,7 +12,7 @@
 		},
 		{
 			"title": "Factfulness",
-			"long-title": "Factfulness: Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think",
+			"longTitle": "Factfulness: Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think",
 			"author": "Hans Rosling",
 			"fiction": false,
 			"genre": "Global Health",
@@ -22,7 +22,7 @@
 		},
 		{
 			"title": "Sapiens",
-			"long-title": "Sapiens: A Brief History of Humankind",
+			"longTitle": "Sapiens: A Brief History of Humankind",
 			"author": "Yuval Noah Harari",
 			"fiction": false,
 			"genre": "Human History",
@@ -32,12 +32,35 @@
 		},
 		{
 			"title": "Paradox",
-			"long-title": "Paradox: The Nine Greatest Enigmas in Physics",
+			"longTitle": "Paradox: The Nine Greatest Enigmas in Physics",
 			"author": "Jim Al-Khalili",
 			"fiction": false,
 			"genre": "Physics",
 			"amazon": "http://a.co/d/b086I4q",
 			"description": "In Paradox, Jim Al-Khalili playfully explores nine seemingly paradoxical problems, unravelling each of them with a toolkit of basic logic, math, and eventually, relativistic physics. It's a rare breed of book that engages complex ideas, keeps the reader intellectually stimulated, and is genuinely a fun read."
+		}
+	],
+	"albums": [
+		{
+			"title": "To Pimp A Butterfly",
+			"artist": "Kendrick Lamar",
+			"genre": "Hip-Hop",
+			"artUrl": "albums/to-pimp-a-butterfly.jpg",
+			"description": "Kendrick Lamar crafts the most cohesive album that I've ever heard, perfecting the fusion of jazz rap, soul, and straight fire in the most socially aware album of the decade."
+		},
+		{
+			"title": "Doo-Wops & Hooligans",
+			"artist": "Bruno Mars",
+			"genre": "Pop",
+			"artUrl": "albums/doo-wops-and-hooligans.jpg",
+			"description": "Bruno Mars makes me feel things, with an album chock full of emotion, soft but moving production, and a voice that is as close to an angel that a human can ever reach."
+		},
+		{
+			"title": "Pure Heroine",
+			"artist": "Lorde",
+			"genre": "Pop",
+			"artUrl": "albums/pure-heroine.png",
+			"description": "Lorde breaks the trend of \"manufactured\" pop to deliver an honest view into the psyche of your prototypical teenager, backed by a unique production vibe and an equally unique voice."
 		}
 	]
 }
