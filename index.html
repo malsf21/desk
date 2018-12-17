@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>my desk</title>
+		<link rel="icon" type="image/png" href="favicon.png">
+		<link rel="stylesheet" type="text/css" href="css/liteweight.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css?v1.0.0" />
+	</head>
+	<body>
+		<div class="desk-background">
+			<h1 class="desk-title">Matt's Desk</h1>
+			<p class="desk-subtitle">a list of things that i enjoy</p>
+			<p class="desk-subtitle">just scroll down</p>
+			<p class="display-mobile">this doesn't work well on mobile, but I'm working on it</p>
+			<a class="text-3x lifted-gh" href="https://github.com/malsf21/desk"><span class="fab fa-github"></span></a>
+		</div>
+		<div class="desk-body">
+			<div class="desk-spacer"></div>
+			<div class="layered-cards" id="book-stack">
+				<div class="card card-bordered-primary">
+					<div class="v-flex-container">
+						<div class="v-flex-item">
+							<h1 class="title title-1">my favourite books</h1>
+							<h2>i think they're pretty cool</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layered-cards" id="album-stack">
+				<div class="card card-bordered-primary">
+					<div class="v-flex-container">
+						<div class="v-flex-item">
+							<h1 class="title title-1">my favourite albums</h1>
+							<h2>they're pretty cool too</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="desk-spacer"></div>
+		</div>
+		<script>
+			fetch('./desk.json')
+		  .then(function(response) {
+		    return response.json();
+		  })
+		  .then(function(data) {
+				console.log(data)
+				for (book in data.books){
+					var bookObj = data.books[book];
+					var fstring = bookObj.fiction ? "Fiction" : "Non-fiction";
+					var bstring = "";
+					if (bookObj.amazon){
+						bstring += '<a class="button button-primary" href="' + bookObj.amazon +'"><span class="fab fa-amazon"></span></a>';
+					}
+					if (bookObj.wikipedia){
+						bstring += '<a class="button button-primary" href="' + bookObj.wikipedia +'"><span class="fab fa-wikipedia-w"></span></a>'
+					}
+					var string = '<div class="card card-bordered-primary"><h1 class="title title-1"><i>' + bookObj.title + '</i></h1><h2>by ' + bookObj.author + '</h2><p><b>' + fstring + ' | ' + bookObj.genre + '</b></p><p>'+ bookObj.description + '</p><hr class="border-top-primary" /><div class="text-center">' + bstring + '</div></div>';
+					document.getElementById("book-stack").innerHTML = document.getElementById("book-stack").innerHTML += string;
+				}
+				for (album in data.albums){
+					var albumObj = data.albums[album];
+					var string = '<div class="card card-bordered-primary"><h1 class="title title-1"><i>' + albumObj.title + '</i></h1><h2>by ' + albumObj.artist + '</h2><p><b>' + albumObj.genre + '</b></p><img class="album-art" src="img/' + albumObj.artUrl +'" /><p>' + albumObj.description + '</p></div>';
+					document.getElementById("album-stack").innerHTML = document.getElementById("album-stack").innerHTML += string;
+				}
+				var parents = document.getElementsByClassName('layered-cards');
+				Array.from(parents).forEach(function(parent){
+					var children = parent.getElementsByTagName('div');
+					for (i = 0; i < Array.from(children).length; i++){
+						children[i].style.zIndex = 100 - i;
+					}
+				})
+		  });
+
+		</script>
+		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/brands.js" integrity="sha384-2vdvXGQdnt+ze3ylY5ESeZ9TOxwxlOsldUzQBwtjvRpen1FwDT767SqyVbYrltjb" crossorigin="anonymous"></script>
+	 	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/fontawesome.js" integrity="sha384-2OfHGv4zQZxcNK+oL8TR9pA+ADXtUODqGpIRy1zOgioC4X3+2vbOAp5Qv7uHM4Z8" crossorigin="anonymous"></script>
+	</body>
+</html>

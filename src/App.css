@@ -1,0 +1,11 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 1em;
+  grid-template-columns: auto auto auto;
+}
