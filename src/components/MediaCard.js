@@ -21,11 +21,13 @@ class MediaCard extends Component {
 		return (
 			<div className="card border-primary">
 				{this.renderImage()}
-				<h2>
-					<span className="text-primary">{this.props.dataObject.title}</span>
-					<span> by { this.renderAttribution() }</span>
-				</h2>
-				<MediaMetadata dataObject={this.props.dataObject} />
+				<div className="text-center">
+					<h2>
+						<span className="text-primary">{this.props.dataObject.title}</span>
+						<span> by { this.renderAttribution() }</span>
+					</h2>
+					<MediaMetadata dataObject={this.props.dataObject} />
+				</div>
 				<hr />
 				<p>
 					{this.props.dataObject.description}
