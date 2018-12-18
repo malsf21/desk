@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CategoryOption from './CategoryOption';
+import SelectionOption from './SelectionOption';
 import MediaCard from './MediaCard';
 
 class CategoryPane extends Component {
@@ -16,20 +16,31 @@ class CategoryPane extends Component {
 
 	render(){
 		return (
-			<div className="card border-primary grid-container">
-				<div>
+			<div>
+				<div className="text-center">
 					{
 						this.props.dataObject.map((object, i) => {
+							// use a span here so we can force a space
 							return (
-								<div key={i}>
-									<CategoryOption dataObject={object} onClick={() => this.changeMedia(i)} currentlySelected={this.state.mediaSelection} selectionNumber={i}/>
-								</div>
+								<span key={i}>
+									<SelectionOption
+										dataObject={object}
+										onClick={() => this.changeMedia(i)}
+										currentlySelected={this.state.mediaSelection}
+										SelectionId={i}
+									/>
+									&nbsp;
+								</span>
 							)
 						})
 					}
 				</div>
 				<div>
-					<MediaCard dataObject={this.props.dataObject[this.state.mediaSelection]}/>
+					<MediaCard
+						dataObject={ // this is a bit complex, but it just checks if the index exists - and defaults to 0 if needed
+							this.props.dataObject[this.state.mediaSelection] !== undefined ? this.props.dataObject[this.state.mediaSelection] : this.props.dataObject[0]
+						}
+					/>
 				</div>
 			</div>
 		)

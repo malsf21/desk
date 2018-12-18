@@ -3,22 +3,18 @@ import './App.css';
 import data from './data.json';
 
 import CategoryPane from './components/CategoryPane';
+import SelectionOption from './components/SelectionOption';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 class App extends Component {
   constructor(props) {
 		super(props);
-    var arr = [];
-    Object.keys(data).forEach(function(key) {
-      arr.push(
-        {
-          key: key,
-          data: data[key]
-        }
-      );
-    });
 		this.state = {
-			categorySelection: arr[0].key,
-      categoryArr: arr
+			categorySelection: data.mediums[0].name
 		};
 	}
   changeCategory(n){
@@ -28,21 +24,30 @@ class App extends Component {
     return (
       <div className="App">
         <div className="main-body">
-          <h1 className="text-center text-3x">desk</h1>
+          <h1 className="text-center text-3x">matt's desk</h1>
+          <p className="text-center">cool stuff that would be on my digital desk</p>
           <div className="text-center">
             {
-              this.state.categoryArr.map((object,i) => {
+              data.mediums.map((object,i) =>{
                 return (
-                  <button 
-                    className="button button-primary"
-                    onClick={() => this.changeCategory(this.state.categoryArr[i].key)}
-                    key={i}> {this.state.categoryArr[i].key}
-                  </button>
+                  <span key={i}>
+  									<SelectionOption
+  										dataObject={object}
+  										onClick={() => this.changeCategory(data.mediums[i].name)}
+  										currentlySelected={this.state.categorySelection}
+  										SelectionId={data.mediums[i].name}
+  									/>
+  									&nbsp;
+  								</span>
                 )
               })
             }
           </div>
-          <CategoryPane dataObject={data[this.state.categorySelection]}/>
+          <br />
+          <CategoryPane dataObject={data.data[this.state.categorySelection]}/>
+          <p className="text-center">
+            Made with <a href="https://github.com/malsf21/liteweight">liteweight</a> and <a href="https://github.com/malsf21/desk"><FontAwesomeIcon icon={faGithub}/></a> <FontAwesomeIcon icon={faReact}/> <FontAwesomeIcon icon={faHeart} color="red"/>
+          </p>
         </div>
       </div>
     );

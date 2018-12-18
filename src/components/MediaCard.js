@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
+import MediaButtons from './MediaButtons';
+import MediaMetadata from './MediaMetadata';
 
 class MediaCard extends Component {
-	renderPregenre(){
-		if (this.props.dataObject.fiction !== undefined){
-			return (this.props.dataObject.fiction ? "Fiction" : "Non-fiction") + " | ";
-		}
-		return;
-	}
 	renderAttribution(){
 		if (this.props.dataObject.author){
 			return this.props.dataObject.author;
@@ -15,18 +11,27 @@ class MediaCard extends Component {
 			return this.props.dataObject.artist;
 		}
 	}
+	renderImage(){
+		if (this.props.dataObject.imgUrl !== undefined){
+			return (<img className="img-responsive" src={this.props.dataObject.imgUrl} alt={this.props.dataObject.title}/>)
+		}
+		return;
+	}
 	render(){
 		return (
 			<div className="card border-primary">
+				{this.renderImage()}
 				<h2>
 					<span className="text-primary">{this.props.dataObject.title}</span>
 					<span> by { this.renderAttribution() }</span>
 				</h2>
-				<p>{this.renderPregenre()}{this.props.dataObject.genre}</p>
+				<MediaMetadata dataObject={this.props.dataObject} />
 				<hr />
 				<p>
 					{this.props.dataObject.description}
 				</p>
+				<hr className="border-primary" />
+				<MediaButtons dataObject={this.props.dataObject} />
 			</div>
 		)
 	}
