@@ -24,7 +24,6 @@ class MediaImage extends Component {
 			getAverageColor(this.props.dataObject.imgUrl).then(
 				rgb => {
 					var hex = this.convertRgbToHex(rgb);
-					console.log(hex)
 					this.setState({boxShadowString: "3px 3px 0 " + hex + ", 6px 6px 0 " + hex + ", 9px 9px 0 " + hex + ", 12px 12px 0 " + hex});
 				}
 			)
