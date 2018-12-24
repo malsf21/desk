@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MediaButtons from './MediaButtons';
+import MediaImage from './MediaImage';
 import MediaMetadata from './MediaMetadata';
 
 class MediaCard extends Component {
@@ -13,14 +14,14 @@ class MediaCard extends Component {
 	}
 	renderImage(){
 		if (this.props.dataObject.imgUrl !== undefined){
-			return (<img className="img-responsive" src={this.props.dataObject.imgUrl} alt={this.props.dataObject.title}/>)
+			return (<img className="img-responsive img-stacked" src={this.props.dataObject.imgUrl} alt={this.props.dataObject.title}/>)
 		}
 		return;
 	}
 	render(){
 		return (
 			<div className="card border-primary">
-				{this.renderImage()}
+				<MediaImage dataObject={this.props.dataObject} />
 				<div className="text-center">
 					<h2>
 						<span className="text-primary">{this.props.dataObject.title}</span>
@@ -28,11 +29,9 @@ class MediaCard extends Component {
 					</h2>
 					<MediaMetadata dataObject={this.props.dataObject} />
 				</div>
-				<hr />
 				<p>
 					{this.props.dataObject.description}
 				</p>
-				<hr className="border-primary" />
 				<MediaButtons dataObject={this.props.dataObject} />
 			</div>
 		)
