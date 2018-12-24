@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getAverageColor from 'get-average-color';
+import getAverageColor from '../getAverageColor';
 
 class MediaImage extends Component {
 	constructor(props) {
