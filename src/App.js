@@ -14,11 +14,19 @@ class App extends Component {
   constructor(props) {
 		super(props);
 		this.state = {
-			categorySelection: data.mediums[0].name
+			categorySelection: -1
 		};
 	}
   changeCategory(n){
     this.setState({categorySelection:n})
+  }
+  showCategoryPane(){
+    if (this.state.categorySelection != -1){
+      return <CategoryPane dataObject={data.data[this.state.categorySelection]}/>;
+    }
+    else{
+      return <div></div>
+    }
   }
   render() {
     return (
@@ -44,7 +52,7 @@ class App extends Component {
             }
           </div>
           <br />
-          <CategoryPane dataObject={data.data[this.state.categorySelection]}/>
+          {this.showCategoryPane()}
           <p className="text-center">
             Made with <a href="https://github.com/malsf21/liteweight">liteweight</a> and <a href="https://github.com/malsf21/desk"><FontAwesomeIcon icon={faGithub}/></a> <FontAwesomeIcon icon={faReact}/> <FontAwesomeIcon icon={faHeart} color="red"/>
           </p>

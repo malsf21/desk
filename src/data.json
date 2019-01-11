@@ -22,6 +22,7 @@
 				"year": 2009,
 				"amazon": "http://a.co/d/8ztiNnP",
 				"wikipedia": "https://en.wikipedia.org/wiki/Justice:_What%27s_the_Right_Thing_to_Do%3F",
+				"imgUrl": "books/justice.jpg",
 				"description": "Justice is one of my favourite political philosophy books - Michael Sandel gives a great introduction to the large history of political philosophy, ranging from the works of Aristotle to Kant to Rawls, but also delves deeply into each (seemingly) competing philosphy and ties it to problems in the status quo."
 			},
 			{
@@ -33,6 +34,7 @@
 				"year": 2018,
 				"amazon": "http://a.co/d/4t9Xfsf",
 				"wikipedia": "https://en.wikipedia.org/wiki/Factfulness:_Ten_Reasons_We%27re_Wrong_About_the_World--and_Why_Things_Are_Better_Than_You_Think",
+				"imgUrl": "books/factfulness.jpg",
 				"description": "Factfulness is a welcome and optimistic return to reality in a world of doom, gloom, and misinformation. Hans Rosling (and his team) describes the astounding improvements in global health and freedom that humankind has made in the last century, while cementing the need for continued action."
 			},
 			{
@@ -44,6 +46,7 @@
 				"year": 2014,
 				"amazon": "http://a.co/d/d8c9pKS",
 				"wikipedia": "https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind",
+				"imgUrl": "books/sapiens.jpg",
 				"description": "Sapiens examines the history of Homo Sapiens in a way high school history classes don't. Harari takes a magnifying glass to the roots of human history, looking at the human condition from a set of different historical lenses, and how that impacts the world we live in today."
 			},
 			{
@@ -54,6 +57,7 @@
 				"genre": "Physics",
 				"year": 2012,
 				"amazon": "http://a.co/d/b086I4q",
+				"imgUrl": "books/paradox.jpg",
 				"description": "In Paradox, Jim Al-Khalili playfully explores nine seemingly paradoxical problems, unravelling each of them with a toolkit of basic logic, math, and eventually, relativistic physics. It's a rare breed of book that engages complex ideas, keeps the reader intellectually stimulated, and is genuinely a fun read."
 			}
 		],
