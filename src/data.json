@@ -87,6 +87,26 @@
 				"wikipedia": "https://en.wikipedia.org/wiki/Pure_Heroine",
 				"imgUrl": "albums/pure-heroine.png",
 				"description": "Lorde breaks the trend of \"manufactured\" pop to deliver an honest view into the psyche of your prototypical teenager, backed by a unique production vibe and an equally unique voice."
+			},
+			{
+				"title": "Apricot Princess",
+				"artist": "Rex Orange County",
+				"genre": "Indie Pop",
+				"year": 2017,
+				"spotify": "https://open.spotify.com/album/2NBVxjZcbH5H1N1Ab2ExDH?si=1yoAXp-CQSCmvegLzxfr9g",
+				"wikipedia": "https://en.wikipedia.org/wiki/Apricot_Princess",
+				"imgUrl": "albums/apricot-princess.jpg",
+				"description": "Rex Orange County imbues his music with a certain energy and passion that's hard to find in mainstream pop - it's perfectly designed imperfection, love songs that sound real and organic rather than manufactured by the music industry. "
+			},
+			{
+				"title": "The College Dropout",
+				"artist": "Kanye West",
+				"genre": "Rap",
+				"year": 2004,
+				"spotify": "https://open.spotify.com/album/3ff2p3LnR6V7m6BinwhNaQ?si=T40G_rK1RXyllM4u-o_sFQ",
+				"wikipedia": "https://en.wikipedia.org/wiki/The_College_Dropout",
+				"imgUrl": "albums/the-college-dropout.jpg",
+				"description": "I miss the old Kanye, straight from the 'Go Kanye, chop up the soul Kanye, set on his goals Kanye. I hate the new Kanye, the bad mood Kanye, the always rude Kanye, spaz in the news Kanye, I miss the sweet Kanye, chop up the beats Kanye, I gotta to say at that time I'd like to meet Kanye."
 			}
 		]
 	}
