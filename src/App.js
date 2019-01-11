@@ -21,7 +21,7 @@ class App extends Component {
     this.setState({categorySelection:n})
   }
   showCategoryPane(){
-    if (this.state.categorySelection != -1){
+    if (this.state.categorySelection !== -1){
       return <CategoryPane dataObject={data.data[this.state.categorySelection]}/>;
     }
     else{
