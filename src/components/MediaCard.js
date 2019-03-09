@@ -21,18 +21,22 @@ class MediaCard extends Component {
 	render(){
 		return (
 			<div className="card border-primary">
-				<MediaImage dataObject={this.props.dataObject} />
-				<div className="text-center">
-					<h2>
-						<span className="text-primary">{this.props.dataObject.title}</span>
-						<span> by { this.renderAttribution() }</span>
-					</h2>
-					<MediaMetadata dataObject={this.props.dataObject} />
+				<div className="row">
+					<div className="col-4">
+						<MediaImage dataObject={this.props.dataObject} />
+					</div>
+					<div className="col-8">
+						<h2>
+							<span className="text-primary">{this.props.dataObject.title}</span>
+							<span> by { this.renderAttribution() }</span>
+						</h2>
+						<MediaMetadata dataObject={this.props.dataObject} />
+						<p>
+							{this.props.dataObject.description}
+						</p>
+						<MediaButtons dataObject={this.props.dataObject} />
+					</div>
 				</div>
-				<p>
-					{this.props.dataObject.description}
-				</p>
-				<MediaButtons dataObject={this.props.dataObject} />
 			</div>
 		)
 	}
