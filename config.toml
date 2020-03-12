@@ -1,0 +1,36 @@
+baseurl                  = "https://desk.matthewwang.me/"           # Your domain name. Must end with "/"
+languageCode             = "en-us"
+defaultContentLanguage   = "en"
+isMultilingual           = false
+title                    = "desk | things that matt likes"
+theme                    = "sam"
+pygmentsStyle            = "monokai"                        # https://help.farbox.com/pygments.html
+pygmentsCodefences       = true
+# googleAnalytics        = ""                               # Tracking code, eg. "UA-111111111-1"
+
+[params]
+    dateform             = "Mon Jan 02, 2006"
+    dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
+    favicon              = "favicon.png"
+    homepage             = "main"                           # What to call the home page link
+    footerText           = "desk: a list of things matt likes"
+
+# Metadata for Open Graph and Twitter
+    description          = "a list of things your third favourite matt wang likes"               # Max 160 characters show in search results
+    images               = ["tn.png"]                       # Image that shows on Twitter cards and Open Graph links to the site
+    title                = "desk | things that matt likes"
+
+[[params.mainMenu]]
+    link = "/books"
+    text = "books"
+
+[[params.mainMenu]]
+    link = "/albums"
+    text = "albums"
+
+[[params.mainMenu]]
+    link = "https://matthewwang.me"
+    text = "more on matt"
+
+[imaging]
+    quality = 75
