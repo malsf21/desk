@@ -30,7 +30,7 @@ pygmentsCodefences       = true
 
 [[params.mainMenu]]
     link = "https://matthewwang.me"
-    text = "more on matt"
+    text = "matt"
 
 [imaging]
     quality = 75
