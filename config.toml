@@ -21,13 +21,13 @@ pygmentsCodefences       = true
     title                = "desk | things that matt likes"
 
 [[params.mainMenu]]
-    link = "/books"
-    text = "books"
-
-[[params.mainMenu]]
     link = "/albums"
     text = "albums"
 
+[[params.mainMenu]]
+    link = "/books"
+    text = "books"
+    
 [[params.mainMenu]]
     link = "https://matthewwang.me"
     text = "matt"
