@@ -1,11 +1,13 @@
-<h2><em>{{ .title }}</em> by {{ .artist }}</h2>
-<div>
-    {{ .genre }}
-    ·
-    {{ .year }}
-    ·
-    <a href="{{ .spotify }}">on spotify</a>
+<div class="album">
+    <h2><em>{{ .title }}</em> by {{ .artist }}</h2>
+    <div>
+        {{ .genre }}
+        ·
+        {{ .year }}
+        ·
+        <a href="{{ .spotify }}">on spotify</a>
+    </div>
+    <p>
+        {{ .blurb }}
+    </p>
 </div>
-<p>
-    {{ .blurb }}
-</p>

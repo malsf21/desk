@@ -1,9 +1,15 @@
-<h2><em>{{ .title }}</em> by {{ .author }}</h2>
-<div>
-    {{ .genre }}
-    ·
-    {{ .year }}
+<div class="book">
+    <h2><em>{{ .title }}</em> by {{ .author }}</h2>
+    <div>
+        {{ .genre }}
+        ·
+        {{ .year }}
+        {{ if .wikipedia }}
+        ·
+        <a href="{{ .wikipedia }}">on wikipedia</a>
+        {{ end }}
+    </div>
+    <p>
+        {{ .blurb }}
+    </p>
 </div>
-<p>
-    {{ .blurb }}
-</p>

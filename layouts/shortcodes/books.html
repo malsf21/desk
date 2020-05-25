@@ -1,3 +1,26 @@
-{{ range $.Site.Data.books }}
-   {{ partial "book.html" . }}
-{{ end }}
+<div id="books">
+   {{ range $.Site.Data.books }}
+      {{ partial "book.html" . }}
+   {{ end }}
+</div>
+<script>
+   function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+         let j = Math.floor(Math.random() * (i + 1));
+         let temp = array[i];
+         array[i] = array[j];
+         array[j] = temp;
+      }
+      return array;
+   }
+
+   let container = document.getElementById("books");
+   let elementsArray = Array.prototype.slice.call(container.getElementsByClassName('book'));
+      elementsArray.forEach(function(element){
+      container.removeChild(element);
+   })
+   shuffleArray(elementsArray);
+   elementsArray.forEach(function(element){
+      container.appendChild(element);
+   })
+</script>
